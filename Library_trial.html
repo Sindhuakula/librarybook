@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Library Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style src="style.css"></style>
+<body onload="displayInitial()">
+    <div class="top">Library Book</div><br>
+    <div id="headerButtons">
+        <button id="addNewBook" >New Book</button>
+        <button id="updateABook">Update Book</button>
+        <button id="DeleteBookS">Delete Book</button>
+    </div><br>
+    <br>
+    <div id="formForBook">
+        Book Name : <input type="text" id="myInput" placeholder="Book name...">
+        <p id="duplicateerror">Element already exists!!</p><br>
+        Author : <input type="text" id="myDescription" placeholder="Author..."><br>
+        Publisher : <input type="text" id="myPublisher" placeholder="Publisher..."><br>
+        Price : <input type="number" id="prior" placeholder="Price..."><br>
+        <br>
+        <button id="formAddButton">Add</button>
+        <button id="formUpdateButton">Update</button>
+        <button id="formCancelButton">Cancel</button>
+    </div>
+    <div id="bookListTable"></div>
+    <script src="scriptview.js"></script>
+    <script src="scriptModel.js"></script>
+    <script src="scriptController.js"></script>
+</body>
+
+</html>

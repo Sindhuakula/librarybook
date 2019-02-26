@@ -1,0 +1,38 @@
+
+.top{
+    background: lightskyblue;
+    color:white;
+    height: 50px;
+    text-align:center;
+    padding-top: 5%;
+    font-size: xx-large;
+
+}
+body{
+    background: white;
+}
+#bookTable{
+    border: "2";
+    border-color:black;
+    border-style: double;
+    width: 50%;   
+    margin-top:10px;
+}
+td, th {
+    border: solid 1px black;
+    } 
+
+    button:hover {background-color: grey}
+  
+  button:active {
+    background-color: gray;
+  }
+  #addNewBook{
+      margin-left:350px; 
+  }
+
+  button {
+      height: 50px;
+    
+  }
+ 
