@@ -68,3 +68,11 @@ bookmodel.prototype.delete = function(i) {
     
 }
 
+bookmodel.prototype.getelementLength = function () {
+    return this.BookList.length;
+}
+
+bookmodel.prototype.deleteAll = function () {
+    this.BookList=[];
+    this.BookMapper={}
+}

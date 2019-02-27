@@ -1,29 +1,39 @@
 <html>
+
 <head>
     <title>Library Book</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <style src="style.css"></style>
+
 <body onload="displayInitial()">
-    <div class="top">Library Book</div><br>
-    <div id="headerButtons">
-        <button id="addNewBook" >New Book</button>
-        <button id="updateABook">Update Book</button>
-        <button id="DeleteBookS">Delete Book</button>
-    </div><br>
-    <br>
-    <div id="formForBook">
-        Book Name : <input type="text" id="myInput" placeholder="Book name...">
-        <p id="duplicateerror">Element already exists!!</p><br>
-        Author : <input type="text" id="myDescription" placeholder="Author..."><br>
-        Publisher : <input type="text" id="myPublisher" placeholder="Publisher..."><br>
-        Price : <input type="number" id="prior" placeholder="Price..."><br>
-        <br>
-        <button id="formAddButton">Add</button>
-        <button id="formUpdateButton">Update</button>
-        <button id="formCancelButton">Cancel</button>
+    <div class="top">Library Book</div>
+    <div id="headerButtons" class="w3-container">
+        <button id="addNewBook" class="w3-btn w3-black">New Book</button>
+        <button id="updateABook" class="w3-btn w3-black">Update Book</button>
+        <button id="DeleteBookS" class="w3-btn w3-black">Delete Book</button>
     </div>
-    <div id="bookListTable"></div>
+
+    <div>
+            <div id="bookListTable" class="w3-center w3-striped"></div>
+    </div>
+
+    <div id="formForBook">
+        <div class="w3-container">
+            <p id="duplicateerror">   </p>
+            Book Name : <input type="text" id="myInput" class="w3-input" placeholder="Book name..."><br>
+            Author : <input type="text" id="myDescription" class="w3-input" placeholder="Author..."><br>
+            Publisher : <input type="text" id="myPublisher" class="w3-input" placeholder="Publisher..."><br>
+            Price : <input type="number" id="prior" class="w3-input" placeholder="Price..."><br>
+        </div>
+        <div id="footerButtons" class="w3-container">
+            <button id="formAddButton" class="w3-btn w3-cyan">Save </button>
+            <button id="formUpdateButton" class="w3-btn w3-cyan"> Update </button>
+            <button id="formCancelButton" class="w3-btn w3-red"> Cancel </button>
+        </div>
+    </div>
+
     <script src="scriptview.js"></script>
     <script src="scriptModel.js"></script>
     <script src="scriptController.js"></script>

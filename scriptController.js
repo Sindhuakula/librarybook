@@ -17,5 +17,15 @@ var controller = function (model, view) {
         this.model.update(a,b,c,d);
     }
 
+    this.noOfCheck = function(k) {
+        var b = this.model.getelementLength();
+        if(b==k)
+            return true;
+        else
+            return false;
+    }
 
+    this.deleteall = function() {
+        this.model.deleteAll();
+    }
 }

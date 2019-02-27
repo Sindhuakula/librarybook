@@ -56,7 +56,6 @@ function formUpdatePage(source) {
 
 function displayInitial() {
     elementID('formForBook').style.display = "none";
-    elementID('duplicateerror').style.display = "none";
     var model = new bookmodel();
     var control = new controller(model, this);
     this.viewMain = function () {
@@ -79,11 +78,11 @@ function displayInitial() {
        
         var status = control.itemcheck(elementID('myInput').value);
         if (status == true) {
-            elementID('duplicateerror').style.display = "block";
+            elementID('duplicateerror').innerHTML="Element already exists!!";
             elementID('myInput').focus();
             elementID('myInput').style = "border-color:red";
         }else {
-            elementID('duplicateerror').style.display = "none";
+            elementID('duplicateerror').innerHTML=" ";
             elementID('myInput').style = "border-color:none";
         }
     }
@@ -135,12 +134,26 @@ function displayInitial() {
     }
     elementID('DeleteBookS').onclick = function () {
         checkboxes = document.getElementsByClassName('checkBoxSet');
-
+        var cnt=0;
+        for (var i = checkboxes.length-1; i >=0 ; i--) {
+            if (checkboxes[i].checked == true)
+                cnt++;
+        }
+        var status = control.noOfCheck(cnt);
+        if (status==true)
+        {
+            if (!confirm("Do you want to delete all the items?"))
+                elementID('bookListTable').innerHTML = viewMain();
+            else
+                control.deleteall();
+        }
+        else{
         for (var i = checkboxes.length-1; i >=0 ; i--) {
             if (checkboxes[i].checked == true){
                 model.delete(i);
             }
         }
+    }
         elementID('bookListTable').innerHTML = viewMain();
 
 }
