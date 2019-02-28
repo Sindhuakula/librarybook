@@ -4,12 +4,13 @@
     <title>Library Book</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <style src="style.css"></style>
 
-<body onload="displayInitial()">
+<body onload="mainIntial()">
     <div class="top">Library Book</div>
-    <div id="headerButtons" class="w3-container">
+    <div id="headerButtons" class="w3-container col-9">
         <button id="addNewBook" class="w3-btn w3-black">New Book</button>
         <button id="updateABook" class="w3-btn w3-black">Update Book</button>
         <button id="DeleteBookS" class="w3-btn w3-black">Delete Book</button>
@@ -33,7 +34,7 @@
             <button id="formCancelButton" class="w3-btn w3-red"> Cancel </button>
         </div>
     </div>
-
+    <script src="app.js"></script>
     <script src="scriptview.js"></script>
     <script src="scriptModel.js"></script>
     <script src="scriptController.js"></script>

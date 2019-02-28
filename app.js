@@ -1,6 +1,5 @@
-mainIntial () {
+function mainIntial () {
     var model = new bookmodel();
-    var view = new view(model);
+    displayInitial();
     var control = new controller(model, view);
-    model.defaulter();
 }
